@@ -1,0 +1,34 @@
+
+
+<!-- templates/your_app/user_profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'submit_request' %}">Submit Service Request</a></li>
+                <li><a href="{% url 'track_request' %}">Track Service Request</a></li>
+                <li><a href="{% url 'account_info' %}">Account Information</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome, {{ user.username }}</h2>
+            <p>Email: {{ user.email }}</p>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gas Utility Service. All rights reserved.</p>
+    </footer>
+</body>
+</html>

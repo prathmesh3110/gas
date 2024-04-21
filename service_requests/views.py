@@ -18,11 +18,11 @@ def submit_request(request):
     
         if request.method == 'POST':
             form = ServiceRequestForm(request.POST, request.FILES)
-            if form.is_valid():
-                service_request = form.save(commit=False)
-                service_request.customer = request.user.customer 
-                service_request.save()
-                return redirect('home')
+            # if form.is_valid():
+            #     service_request = form.save(commit=False)
+            #     service_request.customer = request.user.customer 
+            #     service_request.save()
+            return redirect('/home')
         else:
             form = ServiceRequestForm()
         
